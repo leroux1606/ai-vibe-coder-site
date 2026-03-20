@@ -1,0 +1,43 @@
+import Section from "../ui/Section";
+import Card from "../ui/Card";
+import Tag from "../ui/Tag";
+
+export default function About({ profile }) {
+  return (
+    <Section
+      id="about"
+      eyebrow="About"
+      title="Precision analytics with an edge"
+      subtitle="A finance-rooted BI leader translating complex data into decisions."
+    >
+      <div className="split-grid">
+        <Card>
+          <p>{profile.summary}</p>
+          <div style={{ marginTop: "20px", display: "flex", gap: "12px" }}>
+            <Tag>{profile.location}</Tag>
+            <Tag>{profile.education.degree}</Tag>
+          </div>
+        </Card>
+        <Card>
+          <h3 className="timeline-title">Education</h3>
+          <p>{profile.education.degree}</p>
+          <p className="section-subtitle">
+            {profile.education.school} | {profile.education.year}
+          </p>
+          <div style={{ marginTop: "16px" }}>
+            <h4 className="timeline-title">Core Focus</h4>
+            <p className="section-subtitle">
+              Financial dashboards, semantic modeling, and high-stakes reporting
+              environments across public and private sectors.
+            </p>
+          </div>
+          <ul className="timeline-list" style={{ marginTop: "20px" }}>
+            {profile.highlights.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </Card>
+      </div>
+    </Section>
+  );
+}
