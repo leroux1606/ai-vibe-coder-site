@@ -7,6 +7,7 @@ import Skills from "./components/sections/Skills";
 import Highlights from "./components/sections/Highlights";
 import Portfolio from "./components/sections/Portfolio";
 import Credentials from "./components/sections/Credentials";
+import DigitalTwinSection from "./components/digital-twin/DigitalTwinSection";
 import Contact from "./components/sections/Contact";
 import Footer from "./components/sections/Footer";
 
@@ -26,6 +27,7 @@ export default function Home() {
           <Highlights profile={profile} />
           <Portfolio profile={profile} />
           <Credentials profile={profile} />
+          <DigitalTwinSection />
           <Contact profile={profile} />
           <Footer profile={profile} />
         </div>
