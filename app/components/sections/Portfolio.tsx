@@ -1,6 +1,7 @@
+import type { Profile } from "../../types/profile";
 import Section from "../ui/Section";
 
-export default function Portfolio({ profile }) {
+export default function Portfolio({ profile }: { profile: Profile }) {
   return (
     <Section
       id="portfolio"

@@ -1,8 +1,9 @@
+import type { Profile } from "../../types/profile";
 import Section from "../ui/Section";
 import Card from "../ui/Card";
 import Tag from "../ui/Tag";
 
-export default function About({ profile }) {
+export default function About({ profile }: { profile: Profile }) {
   return (
     <Section
       id="about"
@@ -13,7 +14,7 @@ export default function About({ profile }) {
       <div className="split-grid">
         <Card>
           <p>{profile.summary}</p>
-          <div style={{ marginTop: "20px", display: "flex", gap: "12px" }}>
+          <div className="u-mt-20 u-flex-gap-12">
             <Tag>{profile.location}</Tag>
             <Tag>{profile.education.degree}</Tag>
           </div>
@@ -24,14 +25,14 @@ export default function About({ profile }) {
           <p className="section-subtitle">
             {profile.education.school} | {profile.education.year}
           </p>
-          <div style={{ marginTop: "16px" }}>
+          <div className="u-mt-16">
             <h4 className="timeline-title">Core Focus</h4>
             <p className="section-subtitle">
               Financial dashboards, semantic modeling, and high-stakes reporting
               environments across public and private sectors.
             </p>
           </div>
-          <ul className="timeline-list" style={{ marginTop: "20px" }}>
+          <ul className="timeline-list u-mt-20">
             {profile.highlights.map((item) => (
               <li key={item}>{item}</li>
             ))}

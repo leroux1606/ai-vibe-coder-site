@@ -1,7 +1,8 @@
+import type { Profile } from "../../types/profile";
 import Section from "../ui/Section";
 import Tag from "../ui/Tag";
 
-export default function Skills({ profile }) {
+export default function Skills({ profile }: { profile: Profile }) {
   return (
     <Section
       id="skills"

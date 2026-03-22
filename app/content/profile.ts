@@ -1,4 +1,6 @@
-export const profile = {
+import type { Profile } from "../types/profile";
+
+export const profile: Profile = {
   name: "Jan Le Roux",
   title: "Data Analyst & BI Developer",
   location: "Centurion, South Africa",
@@ -130,12 +132,30 @@ export const profile = {
     "Python for Finance",
   ],
   projects: [
-    "Anglo Gold - Project management reporting from Dataverse.",
-    "Old Mutual - Financial dashboards and executive reporting.",
-    "MTN - Customer usage analytics and dashboards.",
-    "Eskom & Sasol - Procurement, HR, and finance reporting.",
-    "South African Airways - Procurement reporting optimizations.",
-    "Anglo American Platinum - Supply chain analytics from SAP.",
+    {
+      client: "Anglo Gold",
+      description: "Project management reporting from Dataverse.",
+    },
+    {
+      client: "Old Mutual",
+      description: "Financial dashboards and executive reporting.",
+    },
+    {
+      client: "MTN",
+      description: "Customer usage analytics and dashboards.",
+    },
+    {
+      client: "Eskom & Sasol",
+      description: "Procurement, HR, and finance reporting.",
+    },
+    {
+      client: "South African Airways",
+      description: "Procurement reporting optimizations.",
+    },
+    {
+      client: "Anglo American Platinum",
+      description: "Supply chain analytics from SAP.",
+    },
   ],
   portfolio: [
     {
@@ -144,16 +164,20 @@ export const profile = {
     },
     {
       title: "Financial Storytelling",
-      description: "Coming soon - income statement and balance sheet narratives.",
+      description:
+        "Coming soon - income statement and balance sheet narratives.",
     },
     {
       title: "Data Platform Playbooks",
       description: "Coming soon - repeatable BI delivery frameworks.",
     },
   ],
+  // Contact fields are public in the client bundle (portfolio). Phone is linked as "Call" in Contact.tsx
+  // with full number in aria-label / tel: href; adjust if you want stricter anti-scraping.
   contact: {
     email: "jan.leroux0@gmail.com",
     phone: "+27 (0) 82 927 6153",
     linkedin: "www.linkedin.com/in/jan-le-roux",
   },
+  cvUrl: "/CVJan.pdf",
 };

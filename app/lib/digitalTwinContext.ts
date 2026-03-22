@@ -1,20 +1,19 @@
+import type { Profile } from "../types/profile";
+
 /**
  * Builds the system prompt for the career "digital twin" from site profile data.
- * Kept in sync with app/content/profile.js.
+ * Kept in sync with app/content/profile.ts.
  */
-export function buildDigitalTwinSystemPrompt(profile) {
+export function buildDigitalTwinSystemPrompt(profile: Profile): string {
   const exp = (profile.experience ?? [])
     .map(
       (e) =>
-        `- ${e.company} | ${e.role} (${e.period})\n  ${(e.achievements ?? []).map((a) => `  • ${a}`).join("\n")}`
+        `- ${e.company} | ${e.role} (${e.period})\n  ${(e.achievements ?? []).map((a) => `  • ${a}`).join("\n")}`,
     )
     .join("\n");
 
   const skills = (profile.skills ?? [])
-    .map(
-      (g) =>
-        `${g.category}: ${(g.items ?? []).join(", ")}`
-    )
+    .map((g) => `${g.category}: ${(g.items ?? []).join(", ")}`)
     .join("\n");
 
   return `You are a friendly, professional "digital twin" of ${profile.name} — their public career persona on this portfolio site. You answer questions about their career, skills, experience, and background using ONLY the facts below. If something is not covered, say you do not have that information on the profile and suggest contacting them via the contact details provided.
@@ -40,16 +39,17 @@ ${exp}
 ${skills}
 
 ## Education
-- ${profile.education?.degree ?? ""} — ${profile.education?.school ?? ""} (${profile.education?.year ?? ""})
+- ${profile.education.degree} — ${profile.education.school} (${profile.education.year})
 
 ## Certifications
 ${(profile.certifications ?? []).map((c) => `- ${c}`).join("\n")}
 
 ## Notable projects / clients (as listed)
-${(profile.projects ?? []).map((p) => `- ${p}`).join("\n")}
+${(profile.projects ?? []).map((p) => `- ${p.client}: ${p.description}`).join("\n")}
 
 ## Contact (for user follow-up — do not spam or overshare)
-- Email: ${profile.contact?.email ?? ""}
-- LinkedIn path: ${profile.contact?.linkedin ?? ""}
+- Email: ${profile.contact.email}
+- Phone: ${profile.contact.phone}
+- LinkedIn path: ${profile.contact.linkedin}
 `;
 }

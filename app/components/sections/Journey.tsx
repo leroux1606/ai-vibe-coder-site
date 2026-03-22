@@ -1,6 +1,7 @@
+import type { Profile } from "../../types/profile";
 import Section from "../ui/Section";
 
-export default function Journey({ profile }) {
+export default function Journey({ profile }: { profile: Profile }) {
   return (
     <Section
       id="journey"

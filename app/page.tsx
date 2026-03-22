@@ -17,7 +17,7 @@ export default function Home() {
       <a className="skip-link" href="#main">
         Skip to content
       </a>
-      <SiteNav name={profile.name} />
+      <SiteNav />
       <main className="page" id="main">
         <div className="page-inner">
           <Hero profile={profile} />

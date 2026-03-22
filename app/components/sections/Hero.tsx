@@ -1,8 +1,9 @@
+import type { Profile } from "../../types/profile";
 import Container from "../ui/Container";
 import Button from "../ui/Button";
 import Tag from "../ui/Tag";
 
-export default function Hero({ profile }) {
+export default function Hero({ profile }: { profile: Profile }) {
   return (
     <header className="hero">
       <Container>
@@ -18,7 +19,12 @@ export default function Hero({ profile }) {
               <Button href="#portfolio" variant="secondary">
                 View portfolio preview
               </Button>
-              <Button href="/CVJan.pdf" variant="secondary" target="_blank" rel="noreferrer">
+              <Button
+                href={profile.cvUrl}
+                variant="secondary"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Download CV (PDF)
               </Button>
             </div>
@@ -39,14 +45,19 @@ export default function Hero({ profile }) {
               </Button>
             </div>
           </div>
-          <div className="hero-stats">
+          <ul className="stat-list" aria-label="Career metrics">
             {profile.metrics.map((metric) => (
-              <div className="stat-card" key={metric.label}>
-                <div className="stat-value">{metric.value}</div>
-                <div className="stat-label">{metric.label}</div>
-              </div>
+              <li key={metric.label}>
+                <div
+                  className="stat-card"
+                  aria-label={`${metric.label}: ${metric.value}`}
+                >
+                  <div className="stat-value">{metric.value}</div>
+                  <div className="stat-label">{metric.label}</div>
+                </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </Container>
     </header>

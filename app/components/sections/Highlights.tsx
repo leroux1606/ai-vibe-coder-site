@@ -1,6 +1,7 @@
+import type { Profile } from "../../types/profile";
 import Section from "../ui/Section";
 
-export default function Highlights({ profile }) {
+export default function Highlights({ profile }: { profile: Profile }) {
   return (
     <Section
       id="highlights"
@@ -10,11 +11,9 @@ export default function Highlights({ profile }) {
     >
       <div className="highlights-grid">
         {profile.projects.map((project) => (
-          <div className="highlight-card" key={project}>
-            <h3 className="timeline-title">{project.split(" - ")[0]?.trim()}</h3>
-            <p className="section-subtitle">
-              {project.split(" - ").slice(1).join(" - ").trim()}
-            </p>
+          <div className="highlight-card" key={project.client}>
+            <h3 className="timeline-title">{project.client}</h3>
+            <p className="section-subtitle">{project.description}</p>
           </div>
         ))}
       </div>
