@@ -12,6 +12,7 @@ export const profile: Profile = {
     { value: "6 Years", label: "Power BI Delivery" },
   ],
   highlights: [
+    "Databricks Certified Generative AI Engineer (Associate): lakehouse and generative AI on platform.",
     "Built executive-grade financial statements, KPIs, and profitability views in Power BI.",
     "Designed Azure Analysis Services tabular models and semantic layers.",
     "Optimized reporting pipelines using Databricks-backed datasets.",
@@ -97,7 +98,7 @@ export const profile: Profile = {
         "SQL Scripting",
         "ETL Processes",
         "Azure Data Factory",
-        "Databricks (Data Sources)",
+        "Databricks (Lakehouse & Gen AI certified)",
       ],
     },
     {
@@ -120,6 +121,7 @@ export const profile: Profile = {
     year: "1996",
   },
   certifications: [
+    "Databricks Certified Generative AI Engineer (Associate)",
     "AWS Certified Cloud Practitioner",
     "Databricks Fundamentals (Badge)",
     "Python PCEP (Entry-Level)",
