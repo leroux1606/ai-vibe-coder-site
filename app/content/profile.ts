@@ -179,5 +179,5 @@ export const profile: Profile = {
     phone: "+27 (0) 82 927 6153",
     linkedin: "www.linkedin.com/in/jan-le-roux",
   },
-  cvUrl: "/CVJan.pdf",
+  cvUrl: "/CV.pdf",
 };
