@@ -5,7 +5,6 @@ import About from "./components/sections/About";
 import Journey from "./components/sections/Journey";
 import Skills from "./components/sections/Skills";
 import Highlights from "./components/sections/Highlights";
-import Portfolio from "./components/sections/Portfolio";
 import Credentials from "./components/sections/Credentials";
 import DigitalTwinSection from "./components/digital-twin/DigitalTwinSection";
 import Contact from "./components/sections/Contact";
@@ -25,7 +24,6 @@ export default function Home() {
           <Journey profile={profile} />
           <Skills profile={profile} />
           <Highlights profile={profile} />
-          <Portfolio profile={profile} />
           <Credentials profile={profile} />
           <DigitalTwinSection />
           <Contact profile={profile} />

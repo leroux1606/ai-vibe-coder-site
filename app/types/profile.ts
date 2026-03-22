@@ -21,11 +21,6 @@ export interface Education {
   year: string;
 }
 
-export interface PortfolioItem {
-  title: string;
-  description: string;
-}
-
 export interface Contact {
   email: string;
   phone: string;
@@ -50,7 +45,6 @@ export interface Profile {
   education: Education;
   certifications: string[];
   projects: ProjectHighlight[];
-  portfolio: PortfolioItem[];
   contact: Contact;
   /** Path to downloadable CV (served from /public). */
   cvUrl: string;

@@ -286,8 +286,7 @@ img {
 }
 
 .skills-grid,
-.highlights-grid,
-.portfolio-grid {
+.highlights-grid {
   display: grid;
   gap: 18px;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -312,17 +311,11 @@ img {
   gap: 10px;
 }
 
-.highlight-card,
-.portfolio-card {
+.highlight-card {
   padding: 22px;
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
   background: rgba(17, 21, 32, 0.7);
-}
-
-.portfolio-card p {
-  color: var(--muted);
-  font-size: 14px;
 }
 
 .contact-grid {

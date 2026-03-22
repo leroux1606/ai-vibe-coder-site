@@ -159,22 +159,7 @@ export const profile: Profile = {
       description: "Supply chain analytics from SAP.",
     },
   ],
-  portfolio: [
-    {
-      title: "Executive Dashboards",
-      description: "Coming soon - curated analytics packs for leaders.",
-    },
-    {
-      title: "Financial Storytelling",
-      description:
-        "Coming soon - income statement and balance sheet narratives.",
-    },
-    {
-      title: "Data Platform Playbooks",
-      description: "Coming soon - repeatable BI delivery frameworks.",
-    },
-  ],
-  // Contact fields are public in the client bundle (portfolio). Phone is linked as "Call" in Contact.tsx
+  // Contact fields are public in the client bundle. Phone is linked as "Call" in Contact.tsx
   // with full number in aria-label / tel: href; adjust if you want stricter anti-scraping.
   contact: {
     email: "jan.leroux0@gmail.com",

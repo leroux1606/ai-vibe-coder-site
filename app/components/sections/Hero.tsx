@@ -16,8 +16,8 @@ export default function Hero({ profile }: { profile: Profile }) {
             <p className="hero-copy">{profile.summary}</p>
             <div className="hero-actions">
               <Button href="#contact">Start a conversation</Button>
-              <Button href="#portfolio" variant="secondary">
-                View portfolio preview
+              <Button href="#highlights" variant="secondary">
+                Career highlights
               </Button>
               <Button
                 href={profile.cvUrl}
