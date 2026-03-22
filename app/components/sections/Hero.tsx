@@ -15,7 +15,7 @@ export default function Hero({ profile }: { profile: Profile }) {
             </h1>
             <p className="hero-copy">{profile.summary}</p>
             <div className="hero-actions">
-              <Button href="#contact">Start a conversation</Button>
+              <Button href="#digital-twin">Start a conversation</Button>
               <Button href="#highlights" variant="secondary">
                 Career highlights
               </Button>

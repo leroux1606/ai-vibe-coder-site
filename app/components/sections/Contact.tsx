@@ -48,9 +48,7 @@ export default function Contact({ profile }: { profile: Profile }) {
         </div>
       </dl>
       <div className="hero-actions u-mt-24">
-        <Button href={`mailto:${profile.contact.email}`}>
-          Start a conversation
-        </Button>
+        <Button href={`mailto:${profile.contact.email}`}>Email me</Button>
         <Button
           href={`https://${profile.contact.linkedin}`}
           target="_blank"
